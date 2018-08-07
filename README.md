@@ -1,5 +1,7 @@
 # PHANTOM
 
+Presented here is an efficient implementation of the PHANTOM block-DAG protocol.
+
 This package includes:
 - An interface for block-DAGs.
 - Various implementations of the PHANTOM block-DAG protocol:
