@@ -1,4 +1,4 @@
-# PHANTOM
+# PHANTOM (GhostDAG)
 
 Presented here is an efficient implementation of the PHANTOM block-DAG protocol.
 
