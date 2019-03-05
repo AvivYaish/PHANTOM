@@ -61,7 +61,7 @@ class GreedyPHANTOM(PHANTOM):
         # Some unifying data structures to make coloring and ordering easier
         self._past_order = ChainMap(self._blue_past_order, self._red_past_order)
         self._antipast_order = ChainMap(self._blue_antipast_order, self._red_antipast_order)
-        self._antipast = ChainMap(self._antipast_order, self._uncolored_unordered_antipast).keys()
+        self._antipast = ChainMap(self._antipast_order).keys() | self._uncolored_unordered_antipast
         self._coloring_order = ChainMap(self._blue_past_order, self._blue_antipast_order)
 
         # The coloring is in essence the virtual block's coloring of the entire DAG
@@ -566,3 +566,5 @@ class GreedyPHANTOM(PHANTOM):
             if global_id in self._G.node[cur_gid][self._BLUE_DIFF_PAST_ORDER_KEY]:
                 return depth
             depth += len(self._G.node[cur_gid][self._BLUE_DIFF_PAST_ORDER_KEY])
+
+        return 0

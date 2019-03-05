@@ -147,7 +147,7 @@ class CompetingChainGreedyPHANTOM(GreedyPHANTOM, MaliciousDAG):
         Starts a new attack.
         """
         self._stop_attack()
-        self._competing_chain_tip_antipast = set(self._honest_dag._antipast)
+        self._competing_chain_tip_antipast =set(self._honest_dag._antipast)
         self._currently_attacked_block_gid = self._honest_dag._coloring_tip_gid
         self._virtual_competing_chain_block_parents = \
             self._get_competing_chain_tip_parents(self._currently_attacked_block_gid,
